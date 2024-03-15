@@ -1,0 +1,38 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx rollup -c",
+    "build:watch": "npx rollup -c -w",
+    "dev": "node dist/bundle.js",
+    "dev:watch": "nodemon dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.27",
+    "@types/uuid4": "^2.0.3",
+    "esbuild": "^0.20.1",
+    "nodemon": "^3.1.0",
+    "rollup": "^4.13.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.33.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1",
+    "uuid4": "^2.0.3"
+  }
+}
