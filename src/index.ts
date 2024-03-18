@@ -5,6 +5,8 @@ import cors from 'cors'
 import { mongoDBConnect } from "@/db/mongodb/connect"
 import channelRouter from "@/routes/channel.routes"
 import valueRouter from "@/routes/value.routes"
+import https from 'https'
+import fs from 'fs'
 
 dotenv.config()
 
@@ -19,6 +21,4 @@ app.use(cors())
 app.use("/channel", channelRouter)
 app.use("/value", valueRouter)
 
-app.listen(PORT , ()=> {
-    
-})
+https.createServer({ key: fs.readFileSync('./certificates/key.pem'),    cert: fs.readFileSync('./certificates/cert.pem'),    passphrase: 'aditya'}, app).listen(2000)
