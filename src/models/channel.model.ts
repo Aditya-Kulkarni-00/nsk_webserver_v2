@@ -23,12 +23,10 @@ const channelSchema = new Schema({
         type : String
     },
     id : {  
-        type : String
+        type : String,
+        default : uuid4
     }
 })
-
-channelSchema.path('id').default(uuid4())
-
 const channelModel = model('Channels', channelSchema)
 
 export default channelModel
