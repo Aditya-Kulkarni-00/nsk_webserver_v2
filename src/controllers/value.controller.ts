@@ -19,7 +19,6 @@ export const createValuePoints = async (req: Request<{},{},{id : string , value 
   
   export const getLatestValueById = async (req: Request<{id : string },{}, {}, {interval : string}>, res: Response) => {
     try {
-    console.log(req.query)  
       const {id} = req.params
       if(!req.query.interval){
           const data = await readLatestData(id)

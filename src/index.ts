@@ -20,5 +20,5 @@ app.use("/channel", channelRouter)
 app.use("/value", valueRouter)
 
 app.listen(PORT , ()=> {
-    console.log("Server Running at " , PORT)
+    
 })
